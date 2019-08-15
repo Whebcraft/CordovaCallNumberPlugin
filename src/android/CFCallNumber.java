@@ -64,7 +64,7 @@ public class CFCallNumber extends CordovaPlugin {
 
   private void callPhone(JSONArray args) throws JSONException {
     String number = args.getString(0);
-    number = number.replaceAll("#", "%23");
+    number = number.replaceAll("_", "%23");
 
     if (!number.startsWith("tel:")) {
       number = String.format("tel:%s", number);
